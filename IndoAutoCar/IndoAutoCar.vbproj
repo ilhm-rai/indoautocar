@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C57A460-BA54-4E3A-BCC5-ED58AACA6D76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>IndoAutoCar.My.MyApplication</StartupObject>
+    <RootNamespace>IndoAutoCar</RootNamespace>
+    <AssemblyName>IndoAutoCar</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>IndoAutoCar.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>IndoAutoCar.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\Compressed\Bunifu_UI_WinForms_1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="indoautocarDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>indoautocarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modules\Database.vb" />
+    <Compile Include="modules\Master.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="views\AddCar.Designer.vb">
+      <DependentUpon>AddCar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddCar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AddCarRent.Designer.vb">
+      <DependentUpon>AddCarRent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddCarRent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AddCustomer.Designer.vb">
+      <DependentUpon>AddCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AddTypeCar.Designer.vb">
+      <DependentUpon>AddTypeCar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddTypeCar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AddUser.Designer.vb">
+      <DependentUpon>AddUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\CarRental.Designer.vb">
+      <DependentUpon>CarRental.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\CarRental.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Cars.Designer.vb">
+      <DependentUpon>Cars.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\Cars.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Customers.Designer.vb">
+      <DependentUpon>Customers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\Customers.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Dashboard.Designer.vb">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\Dashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\Home.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reports\PreviewReportRental.Designer.vb">
+      <DependentUpon>PreviewReportRental.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reports\PreviewReportRental.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\TypeCars.Designer.vb">
+      <DependentUpon>TypeCars.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\TypeCars.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\Users.Designer.vb">
+      <DependentUpon>Users.vb</DependentUpon>
+    </Compile>
+    <Compile Include="views\Users.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\ReportRental.rdlc" />
+    <EmbeddedResource Include="views\AddCar.resx">
+      <DependentUpon>AddCar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AddCarRent.resx">
+      <DependentUpon>AddCarRent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AddCustomer.resx">
+      <DependentUpon>AddCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AddTypeCar.resx">
+      <DependentUpon>AddTypeCar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AddUser.resx">
+      <DependentUpon>AddUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\CarRental.resx">
+      <DependentUpon>CarRental.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Cars.resx">
+      <DependentUpon>Cars.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Customers.resx">
+      <DependentUpon>Customers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Dashboard.resx">
+      <DependentUpon>Dashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\PreviewReportRental.resx">
+      <DependentUpon>PreviewReportRental.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\TypeCars.resx">
+      <DependentUpon>TypeCars.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Users.resx">
+      <DependentUpon>Users.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="indoautocarDataSet.xsc">
+      <DependentUpon>indoautocarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="indoautocarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>indoautocarDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="indoautocarDataSet.xss">
+      <DependentUpon>indoautocarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
